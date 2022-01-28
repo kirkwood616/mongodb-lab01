@@ -52,7 +52,7 @@ db.people.find({ age: { $lt: 30 } }, { first_name: 1, last_name: 1 });
 db.people.find({ state: "Montana" }, { age: false });
 
 // 13. List the email addresses of people with a ".edu" email. Only display the email. (12)
-db.people.find({ email: /edu$/ }, { email: true });
+db.people.find({ email: /.edu$/ }, { email: true });
 // OR
 db.people.find({ email: /\.edu$/ }, { email: true });
 
