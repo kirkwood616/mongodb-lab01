@@ -53,6 +53,8 @@ db.people.find({ state: "Montana" }, { age: false });
 
 // 13. List the email addresses of people with a ".edu" email. Only display the email. (12)
 db.people.find({ email: /edu$/ }, { email: true });
+// OR
+db.people.find({ email: /\.edu$/ }, { email: true });
 
 // MONGODB LAB 1 (PART 2 - DATA MANIPULATION)
 
