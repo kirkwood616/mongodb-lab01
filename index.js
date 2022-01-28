@@ -45,6 +45,8 @@ db.people.find({ $or: [{ state: "Virginia" }, { first_name: "Virginia" }] });
 
 // 11. List the names of people under age 30. Only display their first and last name. (38)
 db.people.find({ age: { $lt: 30 } }, { first_name: true, last_name: true });
+// OR
+db.people.find({ age: { $lt: 30 } }, { first_name: 1, last_name: 1 });
 
 // 12. List all people in Montana. Display all information except age. (2)
 db.people.find({ state: "Montana" }, { age: false });
