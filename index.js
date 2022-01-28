@@ -27,6 +27,12 @@ db.people.find({
     { gender: "Female" },
   ],
 });
+///// EASIER EXAMPLE WAY
+db.people.find({
+  age: { $gte: 40, $lte: 45 },
+  state: "Florida",
+  gender: "Female",
+});
 
 // 8. List people whose first name starts with "H". (2)
 db.people.find({ first_name: /^H/ });
