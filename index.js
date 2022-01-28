@@ -56,6 +56,16 @@ db.people.find({ email: /.edu$/ }, { email: true });
 // OR
 db.people.find({ email: /\.edu$/ }, { email: true });
 
+// EXTENDED CHALLENGES
+// 14. Count all people with at least one child under age four. (69)
+db.people.find({ "children.age": { $lt: 4 } }).count();
+
+// 15. List people who have no children. (43)
+db.people.find({ children: [] });
+
+// 16. List people who have at least one child. (157)
+db.people.find({ children: { $ne: [] } });
+
 // MONGODB LAB 1 (PART 2 - DATA MANIPULATION)
 
 // 1. Add a person to the collection. You pick the data, but they should have an empty array for children.
