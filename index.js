@@ -4,7 +4,7 @@
 db.people.find();
 
 // 2. Count all people. (200)
-db.people.count();
+db.people.find().count();
 
 // 3. List all people in Arizona. (6)
 db.people.find({ state: "Arizona" });
